@@ -10,7 +10,7 @@ class DBJson extends DBComposite
     public function getValue()
     {
         var_dump($this->value);
-        return json_decode($this->value, true);
+        return json_decode($this->value, false);
     }
 
 

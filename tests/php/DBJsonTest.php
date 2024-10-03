@@ -3,6 +3,7 @@ namespace MaximeRainville\Silverstripe\DbJson\Tests;
 
 
 use SilverStripe\Dev\SapphireTest;
+use MaximeRainville\Silverstripe\DbJson\Tests\DataObjects\DataObjectWithJsonField;
 
 class DBJsonTest extends SapphireTest
 {
@@ -17,8 +18,10 @@ class DBJsonTest extends SapphireTest
         $obj->write();
 
         $objFromDatabase = DataObjectWithJsonField::get()->byID($obj->ID);
-        var_dump($objFromDatabase->dbObject('JSON'));
+        var_dump($objFromDatabase->dbObject('JSON')->getValue());
         $data = $objFromDatabase->JSON;
+        echo "\n\n\nData: \n\n";
+        var_dump($data);
         $this->assertEquals(['key' => 'value'], $data);
     }
 }
