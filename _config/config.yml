@@ -1,1 +1,9 @@
 # see https://docs.silverstripe.org/en/developer_guides/configuration/configuration/
+---
+Name: maxime-rainville-silverstripe-db-json
+after:
+  name: '#databaseconnectors'
+---
+SilverStripe\Core\Injector\Injector:
+  MySQLSchemaManager:
+    class: MaximeRainville\Silverstripe\DbJson\MySQL8SchemaManager
