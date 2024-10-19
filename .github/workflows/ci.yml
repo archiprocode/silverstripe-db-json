@@ -15,12 +15,9 @@ jobs:
         - php: '8.1'
           db: mysql80
           phpunit: true
-          composer_require_extra: "silverstripe/installer:^4"
         - php: '8.2'
           db: mysql80
           phpunit: true
-          composer_require_extra: "silverstripe/installer:^5"
         - php: '8.2'
           db: mariadb
           phpunit: true
-          composer_require_extra: "silverstripe/installer:^5"
