@@ -15,9 +15,13 @@ jobs:
         - php: '8.1'
           db: mysql80
           phpunit: true
+          installer_version: ^4
         - php: '8.2'
           db: mysql80
           phpunit: true
+          installer_version: ^5
         - php: '8.2'
           db: mariadb
           phpunit: true
+          installer_version: ^5
+
