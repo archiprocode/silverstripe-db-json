@@ -4,14 +4,9 @@ namespace MaximeRainville\Silverstripe\DbJson;
 use SilverStripe\ORM\Connect\MySQLSchemaManager;
 
 /**
- *
+ * Extends the default MySQLSchemaManager to add support for JSON fields.
  */
 class MySQL8SchemaManager extends MySQLSchemaManager
 {
-    public function json($values)
-    {
-        $definition = "JSON {$values['null']}";
-        var_dump($definition);
-        return $definition;
-    }
+    use JsonDatabaseFieldDefinition;
 }

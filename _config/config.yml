@@ -7,3 +7,7 @@ after:
 SilverStripe\Core\Injector\Injector:
   MySQLSchemaManager:
     class: MaximeRainville\Silverstripe\DbJson\MySQL8SchemaManager
+
+SilverStripe\ORM\DataObject:
+  extensions:
+    - MaximeRainville\Silverstripe\DbJson\JsonDataExtension

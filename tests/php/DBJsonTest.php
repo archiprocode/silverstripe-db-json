@@ -15,13 +15,19 @@ class DBJsonTest extends SapphireTest
     {
         $obj = new DataObjectWithJsonField();
         $obj->JSON = ['key' => 'value'];
+
+        $this->assertEquals(
+            ['key' => 'value'],
+            $obj->JSON,
+            'JSON value set on DBJSON field can be retrieved'
+        );
         $obj->write();
 
         $objFromDatabase = DataObjectWithJsonField::get()->byID($obj->ID);
-        var_dump($objFromDatabase->dbObject('JSON')->getValue());
-        $data = $objFromDatabase->JSON;
-        echo "\n\n\nData: \n\n";
-        var_dump($data);
-        $this->assertEquals(['key' => 'value'], $data);
+        $this->assertEquals(
+            ['key' => 'value'],
+            $objFromDatabase->JSON,
+            'JSON value set on DBJSON field can be retrieved from database'
+        );
     }
 }

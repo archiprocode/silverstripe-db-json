@@ -1,39 +1,23 @@
 <?php
 namespace MaximeRainville\Silverstripe\DbJson;
 
-use SilverStripe\ORM\FieldType\DBComposite;
+use SilverStripe\ORM\DB;
+use SilverStripe\ORM\FieldType\DBField;
 
-
-class DBJson extends DBComposite
+/**
+ * Allow the creating of native JSON fields.
+ */
+class DBJson extends DBField
 {
 
-    public function getValue()
+    public function requireField()
     {
-        var_dump($this->value);
-        return json_decode($this->value, false);
-    }
+        $parts = [
+            'datatype'   => 'json',
+            'null'       => 'not null',
+        ];
 
-
-    public function setValue($value, $record = null, $markChanged = true)
-    {
-        $value = $this->prepValueForDB($value);
-
-
-        return parent::setValue(['JSON' => $value], $record, $markChanged);
-    }
-
-    public function prepValueForDB($value): string
-    {
-        return json_encode($value);
-    }
-
-    public function scalarValueOnly()
-    {
-        return false;
-    }
-
-    public function compositeDatabaseFields()
-    {
-        return ['JSON' => DBJsonActual::class];
+        $values = ['type' => 'json', 'parts' => $parts];
+        DB::require_field($this->tableName, $this->name, $values);
     }
 }
