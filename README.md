@@ -5,7 +5,7 @@ MySQL 8 introduced support for native JSON fields. This module adds support for 
 ## Installation
 
 ```
-composer require maxime-rainville/silverstripe-db-json
+composer require archipro/silverstripe-db-json
 ```
 
 ## Usage

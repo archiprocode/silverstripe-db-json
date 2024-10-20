@@ -1,5 +1,5 @@
 {
-    "name": "maxime-rainville/silverstripe-db-json",
+    "name": "archipro/silverstripe-db-json",
     "description": "A Silverstripe CMS module to enable the creation of MySQL 8 JSON column on DataObjects",
     "type": "silverstripe-vendormodule",
     "keywords": [
