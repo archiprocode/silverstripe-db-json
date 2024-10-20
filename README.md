@@ -106,6 +106,7 @@ $list = MyDataObject::get()->filter('Payload:Json:not', ['$.meta.Author' => 'Joh
 $list = MyDataObject::get()->where([
     'JSON_EXTRACT("Payload", ?) > ?' => ['$.price', 4],
 ]);
+```
 
 ## Gotchas
 
