@@ -15,7 +15,7 @@ Simply reference the `DBJson` class in your DataObject's `$db` array. This will 
 ```php
 <?php
 use SilverStripe\ORM\DataObject;
-use MaximeRainville\Silverstripe\DbJson\DBJson;
+use ArchiPro\Silverstripe\DbJson\DBJson;
 
 class MyDataObject extends DataObject
 {
@@ -117,7 +117,7 @@ Your MySQLSchemaManager must have a `json` method so it it knows how to create `
 This extension will automatically replace the native MySQLSchemaManager with its own `MySQL8SchemaManager`.
 
 If you've already defined a custom `MySQLSchemaManager`:
-- add the `MaximeRainville\Silverstripe\DbJson\JsonDatabaseFieldDefinition` trait to your class.
+- add the `ArchiPro\Silverstripe\DbJson\JsonDatabaseFieldDefinition` trait to your class.
 - Make sure your custom `MySQLSchemaManager` is loaded after the one provided by this extension.
 
 ```yml

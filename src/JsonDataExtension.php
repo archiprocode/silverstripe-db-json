@@ -1,5 +1,5 @@
 <?php
-namespace MaximeRainville\Silverstripe\DbJson;
+namespace ArchiPro\Silverstripe\DbJson;
 
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\ORM\DataObjectSchema;

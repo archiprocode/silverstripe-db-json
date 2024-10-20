@@ -1,9 +1,9 @@
 <?php
-namespace MaximeRainville\Silverstripe\DbJson\Tests;
+namespace ArchiPro\Silverstripe\DbJson\Tests;
 
 
 use SilverStripe\Dev\SapphireTest;
-use MaximeRainville\Silverstripe\DbJson\Tests\DataObjects\DataObjectWithJsonField;
+use ArchiPro\Silverstripe\DbJson\Tests\DataObjects\DataObjectWithJsonField;
 use SilverStripe\ORM\DB;
 
 class DBJsonTest extends SapphireTest

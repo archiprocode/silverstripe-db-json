@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MaximeRainville\\Silverstripe\\DbJson\\": "src/"
+            "ArchiPro\\Silverstripe\\DbJson\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MaximeRainville\\Silverstripe\\DbJson\\Tests\\": "tests/php/"
+            "ArchiPro\\Silverstripe\\DbJson\\Tests\\": "tests/php/"
         }
     },
     "minimum-stability": "dev",
