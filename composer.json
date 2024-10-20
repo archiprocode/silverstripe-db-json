@@ -11,6 +11,7 @@
         "silverstripe/framework": "^5.0||^4.13"
     },
     "require-dev": {
+        "php": "^8.1",
         "phpunit/phpunit": "^9.6",
         "squizlabs/php_codesniffer": "^3.7",
         "silverstripe/standards": "^1",
