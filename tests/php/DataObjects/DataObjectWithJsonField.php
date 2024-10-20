@@ -11,7 +11,6 @@ class DataObjectWithJsonField extends DataObject implements TestOnly
 
     private static $db = [
         'JSON' => DBJson::class,
-        'Money' => 'Money',
     ];
 
     public function requireTable()

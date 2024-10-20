@@ -10,3 +10,14 @@ SilverStripe\Core\Injector\Injector:
 SilverStripe\ORM\DataObject:
   extensions:
     - MaximeRainville\Silverstripe\DbJson\JsonDataExtension
+
+
+---
+Name: maxime-rainville-silverstripe-db-json-databaseconnectors
+after:
+  name: '#coresearchfilters'
+---
+SilverStripe\Core\Injector\Injector:
+  DataListFilter.Json:
+    class: MaximeRainville\Silverstripe\DbJson\JsonFilter
+  JsonFilter: '%$DataListFilter.Json'
