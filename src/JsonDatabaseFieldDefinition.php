@@ -1,7 +1,6 @@
 <?php
-namespace ArchiPro\Silverstripe\DbJson;
 
-use SilverStripe\ORM\Connect\MySQLSchemaManager;
+namespace ArchiPro\Silverstripe\DbJson;
 
 /**
  * Apply this trait to your Database Schema manager so it knowns how to define json fields.
@@ -10,7 +9,7 @@ trait JsonDatabaseFieldDefinition
 {
     public function json($values)
     {
-        $definition = "JSON {$values['null']}";
+        $definition = "json {$values['null']}";
         return $definition;
     }
 }
